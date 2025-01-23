@@ -1,0 +1,5 @@
+number = @{ ASCII_DIGIT+ ~ ("." ~ ASCII_DIGIT+)? }
+operator = { "+" | "-" | "*" | "/" }
+operand = { number | expression }
+expression = { "(" ~ operator ~ operand ~ operand ~ ")" }
+WHITESPACE = _{ " " | "\t" | "\n" | "\r" }
